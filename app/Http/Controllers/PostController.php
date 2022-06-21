@@ -14,7 +14,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        dd(Post::all());
+        return view('admin.home');
     }
 
     /**
