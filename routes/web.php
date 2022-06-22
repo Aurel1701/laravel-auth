@@ -20,14 +20,14 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
 Route::middleware('auth')
     ->prefix('admin')
     ->namespace('Admin')
     ->name('admin.')
     ->group(function () {
         Route::get('/', 'HomeController@index')
-            ->name('home');
+            ->name('dashboard');
     }
 );
 Route::get("{any?}", function () {

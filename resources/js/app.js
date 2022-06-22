@@ -30,7 +30,7 @@ import App from './views/App';
  */
 
 const app = new Vue({
-    el: '#app',
+    el: '#root',
     render: h => h(App)
 });
 
