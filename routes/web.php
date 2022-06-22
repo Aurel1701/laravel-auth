@@ -26,8 +26,11 @@ Route::middleware('auth')
     ->namespace('Admin')
     ->name('admin.')
     ->group(function () {
-        Route::get('/', 'HomeController@index')
+        // admin dashboard
+Route::get('/', 'HomeController@index')
             ->name('dashboard');
+            // admin posts
+Route::resource('posts', 'PostController');
     }
 );
 Route::get("{any?}", function () {

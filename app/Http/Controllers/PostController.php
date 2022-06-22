@@ -13,9 +13,10 @@ class PostController extends Controller
      */
     public function index()
     {
-        //dd(Post::all());
+        
         $posts = Post::all();
-        return view('admin.home', compact('posts'));
+        dd($posts);
+        return view('admin.posts.index', compact('posts'));
     }
 
     /**
