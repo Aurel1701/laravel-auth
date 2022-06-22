@@ -15,10 +15,10 @@ class PostSeeder extends Seeder
         foreach ($posts as $post) {
             $new_post = new Post();
             $new_post->title = $post['title'];
-            $new_post->cover = $post['title'];
-            $new_post->excerpt = $post['title'];
-            $new_post->author = $post['title'];
-            $new_post->body = $post['title'];
+            $new_post->cover = $post['cover'];
+            $new_post->excerpt = $post['excerpt'];
+            $new_post->author = $post['author'];
+            $new_post->body = $post['body'];
             $new_post->save();
         }
     }

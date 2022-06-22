@@ -18,7 +18,7 @@ class PostController extends Controller
     {
         
         $posts = Post::all();
-        dd($posts);
+       // dd($posts);
         return view('admin.posts.index', compact('posts'));
     }
 
