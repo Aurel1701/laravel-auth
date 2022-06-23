@@ -81,14 +81,20 @@ class PostController extends Controller
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function update(Post $post)
+    public function update(Request $request, Post $post)
     {
         //dd($request->all());
-        //$val_post = $request->validated();
+        //$post = $request->all();
         //dd($val_post);
         //$post->update($val_post);
         // redirect to get route
         //return redirect()->route('admin.posts.index');
+        $post->title = $request->input('title');
+        $post->excerpt = $request->input('excerpt');
+        $post->cover = $request->input('cover ');
+        $post->body = $request->input('body ');
+        $post->author = $request->input('author');
+        $post->save();
     }
 
     /**
