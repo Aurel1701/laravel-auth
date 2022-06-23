@@ -35,8 +35,8 @@
                 <td>{{$post->body}}</td>
                 <td>{{$post->author}}</td>
                 <td>
-                    <a class="btn btn-primary text-white btn-sm" href="#">View</a>
-                    <a class="btn btn-secondary text-white btn-sm" href="#">Edit</a>
+                 <a class="btn btn-primary text-white btn-sm" href="{{route('admin.posts.show', $post->id)}}">View</a>
+                 <a class="btn btn-secondary text-white btn-sm" href="{{route('admin.posts.edit', $post->id)}}">Edit</a>
                 </td>
             </tr>
 
