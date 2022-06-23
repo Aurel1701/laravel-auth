@@ -83,7 +83,11 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
+        //dd($request->all());
+        //$val_post = $request->validated();
+        //$post->update($val_post);
+        // redirect to get route
+        //return redirect()->route('admin.posts.index');
     }
 
     /**
@@ -94,6 +98,7 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        $post->delete();
+        return redirect()->route('admin.posts.index');
     }
 }

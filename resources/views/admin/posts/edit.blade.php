@@ -19,7 +19,7 @@
 
     <div class="">
        <div class="media">
-            <img width="150" src="{{$post->cover}}" alt="{{$post->title}}">
+            <img class="shadow" width="150" src="{{$post->cover}}" alt="{{$post->title}}">
       </div>
       <div class="mb-4">
         <label for="cover" class="form-label me-2">cover</label>
