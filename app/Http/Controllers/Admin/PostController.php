@@ -88,13 +88,14 @@ class PostController extends Controller
         //dd($val_post);
         //$post->update($val_post);
         // redirect to get route
-        //return redirect()->route('admin.posts.index');
+        
         $post->title = $request->input('title');
         $post->excerpt = $request->input('excerpt');
-        $post->cover = $request->input('cover ');
-        $post->body = $request->input('body ');
+        $post->cover = $request->input('cover');
+        $post->body = $request->input('body');
         $post->author = $request->input('author');
         $post->save();
+        return redirect()->route('admin.posts.index');
     }
 
     /**
